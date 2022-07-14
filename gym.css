@@ -22,12 +22,12 @@ header{
     top: 0;
     left: 0;
     width: 100%;
-    padding: 30px 100px;
+    padding: 15px 95px;
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
- /* header .logo{
+ header .logo{
     position: relative;
     font-size: 2em;
     color: #fff;
@@ -35,21 +35,24 @@ header{
     font-weight: 700;
     text-decoration: none;
     letter-spacing: 1px;
-}  */
+} 
+ .logo a:hover{
+    color: #03a9f4;    
+}
 header .navigation{ 
     position: relative;
     display: flex;
-    /* margin-left: 670px; */
+
 }
 header .navigation li{
-    font-size:  27px;
-    font-weight: bold;
+    font-size:  25px;
+    /* font-weight: bold; */
     list-style: none;
 }
 header .navigation li a{
     display: inline-block;
     color: #fff;
-    margin-right: 40px;
+    margin-right: 30px;
     text-decoration: none;
 }
 header .navigation li a:hover{
@@ -95,4 +98,59 @@ header .navigation li a:hover{
     margin-right: 20px;
     filter: invert(1);
     transform: scale(0.7);
+}
+@media only screen and (max-width:914px){
+    header{
+        padding: 15px 40px;
+    }
+    section{
+        padding: 40px;
+        background: url(./bg2.jpg);
+        background-size: cover;
+        background-position: center;
+    }
+    .content .contentBx h2{
+        font-size: 2.5em;
+    }
+    .content .contentBx p{
+        font-size: 1em;
+    }
+    header .navigation{
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: #000;
+        z-index: 10;
+        display: none;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+    }
+    header .navigation .active{
+        display: flex;
+    }
+    header .navigation li a{
+        font-size: 24px;
+        margin: 10px 0;
+    }
+    .togglemenu{
+        position: relative;
+        width: 30px;
+        height: 30px;
+        background: url(./menu.png);
+        background-position: center;
+        background-size: 30px;
+        background-repeat: no-repeat;
+        cursor: pointer;
+        z-index: 11;
+    }
+    .togglemenu.active{
+        background: url(./close.png);
+        background-position: center;
+        background-size: 25px;
+        background-repeat: no-repeat;
+       
+    }
 }
