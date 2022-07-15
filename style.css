@@ -128,7 +128,7 @@ header .navigation li a:hover{
         align-items: center;
         flex-direction: column;
     }
-    header .navigation .active{
+    header .navigation.active{
         display: flex;
     }
     header .navigation li a{
